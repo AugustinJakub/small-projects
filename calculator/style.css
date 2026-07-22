@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('assets/JetBrainsMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+html, body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.page{
+    width: 100%;
+    max-width: 400px;
+    height: 100dvh;
+    touch-action: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 3fr repeat(5,1fr);
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    color: white;
+}
+
+.result{
+    grid-column: span 4;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 0;
+}
+
+.history{
+    font-size: 2rem;
+    color:#5E5E5E;
+    margin-bottom: 10px;
+}
+
+.current-total{
+    font-size: 4rem;
+    font-weight: 300;
+}
+
+
+
+.backspace-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.btn img{
+    width: 80%;
+    height: auto;
+    filter: invert(1) brightness(2);
+    pointer-events: none;
+}
+
+.btn{
+    background-color: #3c3c3c;
+    border: none;
+    border-radius: 50%;
+    width: 100%;
+    aspect-ratio: 1;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transform: scale(1);
+    filter: brightness(1);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.34, 1.65), filter 0.4s ease-out;
+    user-select: none;
+    -moz-user-select: none; 
+    -webkit-user-select: none;
+    -ms-user-select: none; 
+}
+
+@media (hover: hover){
+    .btn:hover{
+        transform: scale(1.22);
+        filter: brightness(1.75);
+    }
+    
+}
+
+.btn:active{
+    transform: scale(1.22);
+    filter: brightness(1.5);
+}
+
+.page > div:nth-child(4n + 1) .btn {
+    background-color: #FE9200;
+}
+
+.page > div:nth-child(4n + 1) .btn:hover {
+    filter: brightness(1.25);
+}
+
+.page > div:nth-child(4n + 1) .btn:active{
+    filter: brightness(1.25);
+}
+
+.page > div:nth-child(n+2):nth-child(-n+4) .btn {
+    background-color: #5E5E5E;
+}
+
+.page > div:nth-child(n+2):nth-child(-n+4) .btn:hover {
+    filter: brightness(1.25);
+}
+
+.page > div:nth-child(n+2):nth-child(-n+4) .btn:active {
+    filter: brightness(1.25);
+}
+
