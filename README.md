@@ -1,2 +1,2 @@
-# Small-Projects
+# small-projects
 Small projects to learn new things.
