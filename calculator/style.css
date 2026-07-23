@@ -35,7 +35,7 @@ html, body{
     padding: 16px;
     color: white;
 }
-
+/* used for displaying results and history */
 .result{
     grid-column: span 4;
     width: 100%;
